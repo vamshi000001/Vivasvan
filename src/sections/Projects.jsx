@@ -11,7 +11,7 @@ const Projects = () => {
             description: 'The world\'s most advanced community-driven platform for reporting lost items and returning found ones. Features a sleek mobile-first UI with intuitive search and reporting flows.',
             tech: ['React', 'Tailwind CSS', 'Vercel'],
             live: 'https://lost-and-found-pink.vercel.app/',
-            github: '#', // Repository link not provided
+            github: 'https://github.com/ramu-varma/lost-and-found', // Repository link not provided
             image: lostAndFoundImg,
             featured: true
         },
