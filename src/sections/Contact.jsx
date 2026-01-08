@@ -6,27 +6,33 @@ const Contact = () => {
     const form = useRef(null);
     const [status, setStatus] = useState(""); // sending | success | error
 
-    const sendEmail = (e) => {
+    const sendEmail = async (e) => {
         e.preventDefault();
         setStatus("sending");
 
-        emailjs
-            .sendForm(
+        try {
+            // 1️⃣ Send message to YOU (ADMIN)
+            await emailjs.sendForm(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
-                import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID_ADMIN,
                 form.current,
                 import.meta.env.VITE_EMAILJS_PUBLIC_KEY
-            )
-            .then(
-                () => {
-                    setStatus("success");
-                    form.current.reset();
-                },
-                (error) => {
-                    console.error("EmailJS Error:", error);
-                    setStatus("error");
-                }
             );
+
+            // 2️⃣ Send auto-reply to USER
+            await emailjs.sendForm(
+                import.meta.env.VITE_EMAILJS_SERVICE_ID,
+                import.meta.env.VITE_EMAILJS_TEMPLATE_ID_AUTOREPLY,
+                form.current,
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+            );
+
+            setStatus("success");
+            form.current.reset();
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            setStatus("error");
+        }
     };
 
     return (
@@ -127,6 +133,7 @@ const Contact = () => {
                                 Failed to send message. Please try again later.
                             </div>
                         )}
+
                     </form>
                 </div>
             </div>
