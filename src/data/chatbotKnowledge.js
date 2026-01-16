@@ -78,6 +78,7 @@ export const vivasvanKnowledge = {
             category: "Recruitment Platform",
             description: "A comprehensive job board connecting developers with top opportunities. Features distinct portals for job seekers and employers with real-time application tracking.",
             technologies: ["MERN Stack", "Redux", "JWT"],
+            liveUrl: "https://skillup-silk.vercel.app/",
             featured: false,
             highlights: [
                 "Dual portals (seekers & employers)",
