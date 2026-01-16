@@ -20,8 +20,8 @@ const Projects = () => {
             category: 'Finance Utility',
             description: 'The smartest way to split rent, utilities, and groceries. Eliminates awkward math with instant, accurate splitting for roommates and groups. Includes room management.',
             tech: ['React', 'Netlify', 'JavaScript'],
-            live: 'https://billssplitterr.netlify.app/',
-            github: 'https://github.com/vamshi000001/billsplitter',
+            live: 'https://billssplitter-vivasvan.netlify.app/',
+            github: 'https://github.com/vamshi00000/billsplitter',
             image: billSplitterImg,
             featured: true
         },

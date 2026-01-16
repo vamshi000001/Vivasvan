@@ -13,7 +13,7 @@ const Footer = () => {
                     <div className="flex flex-col items-center md:items-start text-center md:text-left">
                         <Link to="home" smooth={true} duration={500} className="mb-4 cursor-pointer flex items-center gap-2">
                             <img src={logo} alt="Logo" className="bg-white rounded-full p-1 h-10 w-10 object-contain" />
-                            <span className="text-2xl font-bold text-white tracking-tight">Vivasvan<span className="text-blue-400">Portfolio</span></span>
+                            <span className="text-2xl font-bold text-white tracking-tight">Vivasvan <span className="text-blue-400">Technologies</span></span>
                         </Link>
                         <p className="text-sm text-slate-400 max-w-xs">
                             Crafting digital experiences with code and creativity.
