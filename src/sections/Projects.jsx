@@ -21,7 +21,7 @@ const Projects = () => {
             description: 'The smartest way to split rent, utilities, and groceries. Eliminates awkward math with instant, accurate splitting for roommates and groups. Includes room management.',
             tech: ['React', 'Netlify', 'JavaScript'],
             live: 'https://billssplitter-vivasvan.netlify.app/',
-            github: 'https://github.com/vamshi00000/billsplitter',
+            github: 'https://github.com/vamshi000001/billsplitter',
             image: billSplitterImg,
             featured: true
         },
@@ -30,7 +30,7 @@ const Projects = () => {
             category: 'Recruitment Platform',
             description: 'A comprehensive job board connecting developers with top opportunities. Features distinct portals for job seekers and employers with real-time application tracking.',
             tech: ['MERN Stack', 'Redux', 'JWT'],
-            live: '#',
+            live: 'https://skillup-silk.vercel.app/',
             github: '#',
             image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=800&auto=format&fit=crop&q=60', // Placeholder
             featured: false
