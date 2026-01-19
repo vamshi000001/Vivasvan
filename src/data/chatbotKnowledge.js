@@ -20,7 +20,7 @@ export const vivasvanKnowledge = {
     teamMembers: [
         {
             name: "Vamshi Pothraveni",
-            role: "Java Developer",
+            role: "Founder & Java Full Stack Developer",
             description: "Specializing in robust backend systems with Java and Spring Boot. Focused on scalable architecture and efficient API design.",
             skills: ["Java", "Spring Boot", "Microservices"],
             linkedin: "https://www.linkedin.com/in/vamshi-potharaveni-120175271/",
@@ -28,7 +28,7 @@ export const vivasvanKnowledge = {
         },
         {
             name: "Ramu Atika",
-            role: "MERN Stack Developer",
+            role: "Team Lead & MERN Stack Developer",
             description: "Expert in building full-stack web applications using MongoDB, Express, React, and Node.js. Passionate about responsive UI and performance.",
             skills: ["React", "Node.js", "MongoDB"],
             linkedin: "https://www.linkedin.com/in/atikaramu/",
@@ -41,7 +41,44 @@ export const vivasvanKnowledge = {
             skills: ["Python", "AI/ML", "Data Science"],
             linkedin: "https://www.linkedin.com/in/bharathchary-dev/",
             email: "bharaththangellapalli@gmail.com"
+        },
+        {
+            name: "Rajesh Nimmala",
+            role: "MERN Stack Developer",
+            description: "Experienced developer passionate about building scalable solutions and clean code architecture.",
+            skills: ["React", "Node.js", "MongoDB"],
+            linkedin: "https://www.linkedin.com/in/rajesh-nimmala-b90916337",
+            email: "rajeshnimmala26@gmail.com"
         }
+    ],
+
+    pricing: [
+        {
+            title: "Static & Portfolio Websites",
+            price: "Based on Requirements",
+            description: "Perfect for personal portfolios, landing pages, and small business websites.",
+            features: ["Responsive Design", "SEO Optimization", "Contact Form Integration", "Fast Loading Speed", "1 Month Support"]
+        },
+        {
+            title: "Dynamic Web Applications",
+            price: "Based on Complexity",
+            description: "Robust solutions for businesses needing user accounts, databases, and complex logic.",
+            features: ["Full-Stack Development", "Database Integration", "User Authentication", "Admin Dashboard", "3 Months Support"],
+            recommended: true
+        },
+        {
+            title: "Mobile App Development",
+            price: "Custom Quote",
+            description: "Native or cross-platform mobile applications tailored to your specific needs.",
+            features: ["iOS & Android Support", "Push Notifications", "Offline Capabilities", "API Integration", "App Store Submission"]
+        }
+    ],
+
+    paymentProcess: [
+        { step: "01", title: "Initial Consultation", desc: "We discuss your requirements and finalize the scope." },
+        { step: "02", title: "Upfront Payment", desc: "Pay just 30% to secure your slot and kickstart the project." },
+        { step: "03", title: "Development", desc: "Regular updates and reviews as we build your solution." },
+        { step: "04", title: "Final Delivery", desc: "Pay the remaining balance and launch your project." }
     ],
 
     projects: [
@@ -149,6 +186,18 @@ TEAM OVERVIEW:
 SERVICES OFFRED:
 ${kb.services.map(service => `- ${service}`).join('\n')}
 
+PRICING PLANS:
+${kb.pricing.map(plan => `
+- ${plan.title}
+  Price: ${plan.price}
+  Description: ${plan.description}
+  Features: ${plan.features.join(', ')}
+  ${plan.recommended ? '(Recommended Plan)' : ''}
+`).join('\n')}
+
+PAYMENT PROCESS:
+${kb.paymentProcess.map(step => `- Step ${step.step}: ${step.title} - ${step.desc}`).join('\n')}
+
 TEAM MEMBERS:
 ${kb.teamMembers.map(member => `
 - ${member.name} (${member.role})
@@ -180,11 +229,12 @@ CORE VALUES:
 ${kb.values.map(value => `- ${value}`).join('\n')}
 
 IMPORTANT INSTRUCTIONS:
-1. Only answer questions related to Vivasvan team, projects, skills, achievements, or team members.
+1. Only answer questions related to Vivasvan team, projects, services, pricing, skills, or team members.
 2. If a question is NOT related to Vivasvan, respond EXACTLY with: "This question is not related to Vivasvan. Thank you! - Vivasvan Team"
-3. Be friendly, professional, and informative.
-4. Provide specific details when asked about team members, projects, or skills.
-5. If asked about contact information, provide the relevant LinkedIn or email.
-6. Keep responses concise but comprehensive.
+3. Be friendly, professional, enthusiastic, and informative.
+4. When asked about pricing, mention the flexible options and the simple 30% upfront payment process.
+5. Provide specific details when asked about team members, projects, or skills.
+6. If asked about contact information, provide the relevant LinkedIn or email.
+7. Keep responses concise but comprehensive.
 `;
 };
