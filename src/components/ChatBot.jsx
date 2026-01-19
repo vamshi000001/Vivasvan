@@ -57,16 +57,35 @@ const ChatBot = () => {
         <>
             {/* Floating Chat Button */}
             {!isOpen && (
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 group"
-                    aria-label="Open chat"
-                >
-                    <MessageCircle className="w-6 h-6" />
-                    <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center animate-pulse">
-                        !
-                    </span>
-                </button>
+                <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center justify-center group pointer-events-none">
+                    <style>{`
+                        @keyframes ripple {
+                            0% { transform: scale(1); opacity: 0.8; }
+                            100% { transform: scale(2.5); opacity: 0; }
+                        }
+                        .animate-ripple {
+                            animation: ripple 2s linear infinite;
+                        }
+                    `}</style>
+
+                    {/* Ring 1 */}
+                    <div className="absolute w-12 h-12 sm:w-14 sm:h-14 bg-blue-500/50 rounded-full animate-ripple"></div>
+                    {/* Ring 2 */}
+                    <div className="absolute w-12 h-12 sm:w-14 sm:h-14 bg-purple-500/50 rounded-full animate-ripple [animation-delay:0.6s]"></div>
+                    {/* Ring 3 */}
+                    <div className="absolute w-12 h-12 sm:w-14 sm:h-14 bg-pink-500/50 rounded-full animate-ripple [animation-delay:1.2s]"></div>
+
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        className="relative pointer-events-auto bg-gradient-to-r from-blue-600 to-purple-600 text-white p-3 sm:p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 z-10"
+                        aria-label="Open chat"
+                    >
+                        <MessageCircle className="w-6 h-6" />
+                        <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center animate-pulse">
+                            !
+                        </span>
+                    </button>
+                </div>
             )}
 
             {/* Chat Window */}
